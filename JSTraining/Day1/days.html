@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+    <script>
+        function timeconverter()
+{
+var date = new Date();
+let day=date.getDay();
+let hours=date.getHours();
+let minutes=date.getMinutes();
+let seconds=date.getSeconds()
+let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+let Today=days[day];
+if(hours>12)
+{
+    let p=hours-12
+    let dateString=Today+" | "+p+" PM "+":"+minutes+": "+seconds+"  ";
+    document.write(dateString);
+    document.write("<br>");
+}
+else{
+    let dateString=Today+"AM "+hours+": "+minutes+": "+seconds+"  ";
+    document.write(dateString);
+    document.write("<br>")
+}
+let dateString =Today +" | "+hours +" : " +minutes +" : " +seconds+"  ";
+    document.write(dateString);
+ }
+
+    </script>
+</head>
+<body>
+    <h1>Current date and time</h1>
+    <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="button" class="btn btn-warning" onclick="timeconverter()">Click to know the time</button>
+        </div>
+    </div>
+</body>
+</html>
